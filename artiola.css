@@ -306,7 +306,7 @@ p {
 ========================================= */
 .af-footer {
   font-family: Arial, sans-serif;
-  background-color: #222;
+  background-color: #000000;
   color: #fff;
 }
 
@@ -397,7 +397,87 @@ p {
   background-size: cover;
   min-height:100vh;
 }
- 
+.af-aboutus-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.af-aboutus-hero .af-container {
+  position: relative;
+  z-index: 1;
+}
+
+.af-aboutus-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.af-aboutus-hero p {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   OUR STORY
+========================================= */
+.af-about .af-about-text h2 {
+  margin-bottom: 15px;
+}
+
+.af-about .af-about-text p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.af-about-image img {
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   MISSION & VISION
+========================================= */
+.af-services h2 {
+  text-align: center;
+}
+
+.af-services .af-card h3 {
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+.af-process h2 {
+  margin-bottom: 20px;
+}
+
+.af-process .af-step {
+  font-weight: 500;
+}
+
+
+/* =========================================
+   RESPONSIVE – ABOUT US
+========================================= */
+@media (max-width: 768px) {
+  .af-aboutus-hero h1 {
+    font-size: 36px;
+  }
+
+  .af-aboutus-hero p {
+    font-size: 15px;
+  }
+
+  .af-about-image img {
+    width: 100%;
+  }
+}
 
 
 
@@ -405,21 +485,11 @@ p {
  Services
 ========================================= */
 
-.af-services-hero{
-  background-image: url(images/aesthetic3.jpg);
-  background-size: cover;
-  padding: 80px 0;
-  color: white;
-  padding: 100px 0 0 0;
-  background-size: cover;
-  min-height:100vh;
-}
-
 /* =========================================
-Treatments
+   SERVICES – HERO
 ========================================= */
 
-.af-treatments-hero{
+.af-services-hero{
   background-image: url(images/aesthetic6.jpg);
   background-size: cover;
   padding: 80px 0;
@@ -427,4 +497,422 @@ Treatments
   padding: 100px 0 0 0;
   background-size: cover;
   min-height:100vh;
+}
+/* .af-services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+} */
+
+.af-services-hero .af-container {
+  position: relative;
+  z-index: 1;
+}
+
+.af-services-hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.af-services-hero p {
+  max-width: 520px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+.af-services h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.af-services > p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.af-services .af-card h3 {
+  margin-bottom: 12px;
+}
+
+.af-services .af-card p {
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   SERVICE CARD HOVER (SOFTER)
+========================================= */
+.af-services .af-card:hover {
+  transform: translateY(-6px);
+  border: 2px solid #a85d5d;
+}
+
+
+/* =========================================
+   SERVICE ICON (OPTIONAL)
+========================================= */
+.af-service-icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #a85d5d;
+}
+
+
+/* =========================================
+   RESPONSIVE – SERVICES
+========================================= */
+@media (max-width: 768px) {
+  .af-services-hero h1 {
+    font-size: 36px;
+  }
+
+  .af-services-hero p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+Treatments
+========================================= */
+
+.af-treatments-hero{
+  background-image: url(images/aesthetic5.jpg);
+  background-size: cover;
+  padding: 80px 0;
+  color: white;
+  padding: 100px 0 0 0;
+  background-size: cover;
+  min-height:100vh;
+}
+/* =========================================
+   RESULTS & TRUST SECTION
+========================================= */
+.af-results {
+  padding: 80px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.af-results h2 {
+  margin-bottom: 10px;
+}
+
+.af-results-sub {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+.af-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.af-result-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.af-result-card:hover {
+  transform: translateY(-6px);
+}
+
+.af-result-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.af-result-card h4 {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .af-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   PRICING HERO
+========================================= */
+.af-pricing-hero {
+  background-image: url(images/aesthetic4.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 160px;
+  position: relative;
+}
+
+.af-pricing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.af-pricing-hero .af-container {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* =========================================
+   PRICING SECTION
+========================================= */
+.af-pricing-sub {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.af-price-card p {
+  margin-bottom: 8px;
+}
+
+.af-price-card button {
+  margin-top: 15px;
+}
+
+/* Highlight animation */
+.af-price-card.highlight {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .af-price-card.highlight {
+    transform: scale(1);
+  }
+}
+/* ================= TEAM HERO ================= */
+.af-team-hero {
+  min-height: 100vh;
+  padding-top: 160px;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+}
+
+.af-team-hero h1 {
+  font-size: 60px;
+}
+
+/* ================= TEAM SECTION ================= */
+.af-section-title {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 60px;
+}
+
+.af-team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.af-team-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.af-team-card:hover {
+  transform: translateY(-8px);
+}
+
+.af-team-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.af-team-card span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* ================= VALUES ================= */
+.af-team-values {
+  padding: 70px 0;
+  background: #f9f9f9;
+}
+
+.af-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.af-value-box {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .af-team-grid,
+  .af-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-team-hero h1 {
+    font-size: 40px;
+  }
+}
+/* ================= PRODUCTS HERO ================= */
+.af-products-hero {
+  min-height: 100vh;
+  padding-top: 160px;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+}
+
+.af-products-hero h1 {
+  font-size: 60px;
+}
+
+/* ================= PRODUCTS GRID ================= */
+.af-products h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.af-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.af-product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.af-product-card:hover {
+  transform: translateY(-8px);
+}
+
+.af-product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.af-product-card h4 {
+  margin-bottom: 10px;
+}
+
+.af-product-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.af-product-card span {
+  font-weight: bold;
+  color: #a85d5d;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .af-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-products-hero h1 {
+    font-size: 40px;
+  }
+}
+/* ================= BLOG HERO ================= */
+.af-blog-hero {
+  min-height: 100vh;
+  padding-top: 160px;
+  background: linear-gradient(to right, #f5f5f5, #ffffff);
+}
+
+.af-blog-hero h1 {
+  font-size: 60px;
+}
+
+/* ================= BLOG POSTS GRID ================= */
+.af-blog-posts h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.af-blog-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.af-blog-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.af-blog-card:hover {
+  transform: translateY(-8px);
+}
+
+.af-blog-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.af-blog-card h4 {
+  margin-bottom: 10px;
+}
+
+.af-blog-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .af-blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-blog-hero h1 {
+    font-size: 40px;
+  }
 }
