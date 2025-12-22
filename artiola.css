@@ -57,6 +57,64 @@ p {
   color: #f7bfbc;
 
 }
+/* ==================== Burger ==================== */
+.af-burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.af-burger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* ==================== Responsive ==================== */
+@media screen and (max-width: 992px) {
+  .af-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  .af-nav a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .af-burger {
+    display: flex;
+  }
+
+  .af-nav.active {
+    display: flex;
+  }
+}
+
+/* ==================== Burger Animation ==================== */
+.af-burger.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.af-burger.toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.af-burger.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 /* =========================================
    HERO
@@ -119,6 +177,7 @@ p {
 .btn-small {
   padding: 8px 20px;
   font-size: 14px;
+  text-decoration: none;
 }
 
 /* Circle images */
@@ -219,6 +278,12 @@ p {
 /* =========================================
    TEAM
 ========================================= */
+.af-team-hero {
+  background-image: url(images/teambg.jpg);
+  background-size: cover;
+  padding: 80px 0;
+  text-align: center;
+}
 .af-team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -248,6 +313,10 @@ p {
 /* =========================================
    PRICING
 ========================================= */
+.af-pricing{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
 .af-pricing-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -260,7 +329,7 @@ p {
   background: white;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
 }
 
 .af-price-card.highlight {
@@ -276,7 +345,7 @@ p {
    FAQ
 ========================================= */
 .af-faq{
-  margin-bottom: 30px;
+  margin: 100px;
 }
 .af-faq details {
   margin: 15px 0;
@@ -700,11 +769,6 @@ Treatments
   }
 }
 /* ================= TEAM HERO ================= */
-.af-team-hero {
-  min-height: 100vh;
-  padding-top: 160px;
-  background: linear-gradient(to right, #f5f5f5, #ffffff);
-}
 
 .af-team-hero h1 {
   font-size: 60px;
@@ -780,12 +844,17 @@ Treatments
   .af-team-hero h1 {
     font-size: 40px;
   }
+  .af-team-member img{
+    width: 50%;
+    height: 80%;
+  }
 }
 /* ================= PRODUCTS HERO ================= */
 .af-products-hero {
   min-height: 100vh;
   padding-top: 160px;
-  background: linear-gradient(to right, #f5f5f5, #ffffff);
+  background-image: url(images/aesthetic3.jpg);
+  background-size: cover;
 }
 
 .af-products-hero h1 {
@@ -796,6 +865,7 @@ Treatments
 .af-products h2 {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .af-products-grid {
@@ -855,7 +925,8 @@ Treatments
 .af-blog-hero {
   min-height: 100vh;
   padding-top: 160px;
-  background: linear-gradient(to right, #f5f5f5, #ffffff);
+  background-image: url(images/aesthetiic1.jpg);
+  background-size: cover;
 }
 
 .af-blog-hero h1 {
@@ -914,5 +985,73 @@ Treatments
 
   .af-blog-hero h1 {
     font-size: 40px;
+  }
+}
+/* blog single section */
+.af-blog-single {
+  padding: 80px 0;
+  background: #fafafa;
+  margin-top: 100px;
+}
+
+/* blog card */
+.af-blog-wrapper {
+  max-width: 850px;
+  margin: auto;
+  background: #fff;
+  padding: 50px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  overflow: visible; /* SHUME E RENDESISHME */
+}
+
+/* titulli */
+.af-blog-wrapper h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* meta */
+.af-blog-meta {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/* image */
+.af-blog-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 35px;
+}
+
+/* content */
+.af-blog-content h3 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.af-blog-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .af-blog-wrapper {
+    padding: 25px;
+  }
+
+  .af-blog-img {
+    height: 260px;
+  }
+
+  .af-blog-wrapper h1 {
+    font-size: 28px;
   }
 }
