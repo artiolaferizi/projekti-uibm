@@ -279,7 +279,7 @@ p {
    TEAM
 ========================================= */
 .af-team-hero {
-  background-image: url(images/teambg.jpg);
+  background-image: url(images/aesthetic6.jpg);
   background-size: cover;
   padding: 80px 0;
   text-align: center;
@@ -1054,4 +1054,185 @@ Treatments
   .af-blog-wrapper h1 {
     font-size: 28px;
   }
+}
+/* ================= BOOK APPOINTMENT ================= */
+
+.af-book {
+  padding: 120px 0 80px;
+  background: #fafafa;
+  margin-top: 50px;
+}
+.af-book-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.af-book-header p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.af-book-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.af-book-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.af-form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.af-form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.af-form-group input,
+.af-form-group select,
+.af-form-group textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.af-form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.af-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.af-book-info {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.af-book-info h3 {
+  margin-bottom: 20px;
+}
+
+.af-book-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.af-book-info li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.af-note {
+  color: #777;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .af-book-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===== CONTACT US ===== */
+.af-about{
+margin-top: 150px;
+}
+
+.af-contact {
+  padding: 120px 0 80px;
+  background: #fafafa;
+}
+
+.af-contact-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.af-contact-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.af-contact-header p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.af-contact-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+}
+
+.af-contact-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.af-contact-info {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.af-contact-info h3 {
+  margin-bottom: 15px;
+}
+
+.af-contact-info p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.af-contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.af-contact-info li {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .af-contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.af-about form input,
+.af-about form textarea {
+  border-radius: 8px;
+}
+
+.af-about form textarea {
+  resize: none;
+}
+
+.af-about form input:focus,
+.af-about form textarea:focus {
+  border-color: #e91e63;
+  box-shadow: 0 0 0 0.15rem rgba(233, 30, 99, 0.25);
 }
