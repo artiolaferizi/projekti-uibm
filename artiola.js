@@ -1,4 +1,4 @@
-//Burger menu//
+//Burger menu
   const burger = document.getElementById('af-burger');
   const nav = document.getElementById('af-nav');
 
@@ -8,7 +8,7 @@
   });
 
 
-// JS FOR ALERT 
+// JS for alert
 
 document.getElementById('contactForm').addEventListener('submit', function(e){
   e.preventDefault();
