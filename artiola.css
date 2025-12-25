@@ -493,17 +493,17 @@ p {
 /* =========================================
    OUR STORY
 ========================================= */
-.af-about .af-about-text h2 {
-  margin-bottom: 15px;
+.af-about .af-about-text h3 {
+  margin-bottom: 25px;
 }
 
-.af-about .af-about-text p {
-  margin-bottom: 15px;
+.af-about .af-about-text h6 {
+  margin-bottom: 45px;
   line-height: 1.7;
 }
 
-.af-about-image img {
-  border-radius: 12px;
+.af-about-image img:hover {
+ border: 1px solid black;
 }
 
 
@@ -531,6 +531,7 @@ p {
 }
 
 
+
 /* =========================================
    RESPONSIVE – ABOUT US
 ========================================= */
@@ -554,10 +555,6 @@ p {
  Services
 ========================================= */
 
-/* =========================================
-   SERVICES – HERO
-========================================= */
-
 .af-services-hero{
   background-image: url(images/aesthetic6.jpg);
   background-size: cover;
@@ -567,12 +564,6 @@ p {
   background-size: cover;
   min-height:100vh;
 }
-/* .af-services-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.55);
-} */
 
 .af-services-hero .af-container {
   position: relative;
@@ -625,14 +616,71 @@ p {
 
 
 /* =========================================
-   SERVICE ICON (OPTIONAL)
+   SERVICE ICON 
 ========================================= */
 .af-service-icon {
   font-size: 36px;
   margin-bottom: 15px;
   color: #a85d5d;
 }
+/* ================= SERVICE SCHEDULE TABLE ================= */
 
+.af-schedule {
+  padding: 80px 0;
+  background: #fafafa;
+  text-align: center;
+  margin-top: -80px;
+}
+
+.af-schedule h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.af-schedule p {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.af-table-wrapper {
+  overflow-x: auto; /* për responsive */
+}
+
+.af-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.af-table th,
+.af-table td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.af-table th {
+  background:#a85d5d;
+  color: #fff;
+  font-weight: 600;
+}
+
+.af-table tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.af-table tr:hover {
+  background: #ffe6f0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .af-table th,
+  .af-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
 
 /* =========================================
    RESPONSIVE – SERVICES
@@ -936,7 +984,7 @@ Treatments
 /* ================= BLOG POSTS GRID ================= */
 .af-blog-posts h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 50px;
 }
 
 .af-blog-grid {
@@ -1082,7 +1130,7 @@ Treatments
   background: #fff;
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgb(139, 108, 108);
 }
 
 .af-form-group {
@@ -1150,9 +1198,6 @@ Treatments
   }
 }
 /* ===== CONTACT US ===== */
-.af-about{
-margin-top: 150px;
-}
 
 .af-contact {
   padding: 120px 0 80px;
@@ -1174,13 +1219,17 @@ margin-top: 150px;
   color: #666;
   line-height: 1.6;
 }
-
+.af-about-text{
+  margin-top: 100px;
+}
 .af-contact-wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 50px;
 }
-
+#contactForm{
+margin-top: 100px;
+}
 .af-contact-form {
   background: #fff;
   padding: 40px;
