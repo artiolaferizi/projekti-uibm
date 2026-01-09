@@ -8,9 +8,7 @@
   <link rel="stylesheet" href="bootstrap.css" />
 </head>
 <body id="af">
-
-<!-- ================= HEADER ================= -->
-<header class="af-header">
+  <header class="af-header">
   <div class="af-container nav-container">
     <div class="af-logo">
       <img src="images/logo.png" alt="logo" width="180px" height="150px" />
@@ -35,76 +33,110 @@
   </div>
 </header>
 
-<!-- ================= CONTACT US ================= -->
-<section class="af-about container my-5">
-  <div class="af-about-grid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | GlowSkin</title>
 
-    <!-- ================= CONTACT INFO ================= -->
-    <div class="af-about-text">
-      <h3>Contact GlowSkin</h3>
-      <h6>
-        We are always happy to hear from you.  
-        Contact GlowSkin Beauty Center for appointments, consultations, or any questions about our services.
-      </h6>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap.css">
 
-      <h5><strong>📍 Address:</strong> Rruga e Bukurisë 12, Prishtinë</h5>
-      <h5><strong>📞 Phone:</strong> +383 44 123 456</h5>
-      <h5><strong>📧 Email:</strong> info@glowskin.com</h5>
-      <h5><strong>⏰ Working Hours:</strong> Mon – Sat: 09:00 – 19:00</h5>
-    </div>
+  <!-- Optional: CSS yt për ngjyra/branding -->
+  <link rel="stylesheet" href="artiola.css">
+</head>
+<body>
 
-    <!-- ================= CONTACT FORM + ALERT ================= -->
-    <div class="af-about-image">
-      <form id="contactForm" class="af-glass-card rounded shadow-lg p-4">
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Your full name" required>
-        </div>
-        <div class="mb-3">
-          <input type="email" class="form-control" placeholder="Your email" required>
-        </div>
-        <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Subject">
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" rows="4" placeholder="Your message" required></textarea>
-        </div>
-        <button type="submit" class="af-btn w-100">Send Message</button>
-      </form>
-      <div id="formAlert" class="alert alert-success mt-3 d-none">
-        Your message has been sent successfully!
-      </div>
-    </div>
-
+<!-- ================= CONTACT HERO ================= -->
+<section class="bg-light py-5">
+  <div class="container text-center">
+    <h1 class="fw-bold">Contact Us</h1>
+    <p class="text-muted">
+      We are here to help you with appointments, consultations, and questions.
+    </p>
   </div>
-
-
-
-  <!-- ================= MODAL ================= -->
-  <div class="af-container mt-0">
-    <button type="button" class="af-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">
-      Book Appointment
-    </button>
-
-    <div class="modal fade" id="bookingModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Confirm Booking</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-          <div class="modal-body">
-            Are you sure you want to book this appointment?
-          </div>
-          <div class="modal-footer">
-            <button class="af-btn" data-bs-dismiss="modal">Cancel</button>
-            <button class="af-btn">Confirm</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </section>
+
+<!-- ================= CONTACT CONTENT ================= -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- CONTACT INFO -->
+      <div class="col-lg-5">
+        <div class="p-4 bg-white shadow rounded h-100">
+          <h4 class="mb-3">GlowSkin Beauty Center</h4>
+
+          <p><strong>📍 Address:</strong><br>Rruga e Bukurisë 12, Prishtinë</p>
+          <p><strong>📞 Phone:</strong><br>+383 44 123 456</p>
+          <p><strong>📧 Email:</strong><br>info@glowskin.com</p>
+          <p><strong>⏰ Working Hours:</strong><br>Mon – Sat: 09:00 – 19:00</p>
+
+          <button class="btn btn-dark mt-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+            Contact Us
+            
+          </button>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="col-lg-7">
+        <div class="p-4 bg-white shadow rounded">
+          <h4 class="mb-4">Send us a message</h4>
+
+          <form>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" placeholder="Full name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input type="email" class="form-control" placeholder="Email address" required>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Your message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100">
+              Send Message
+            </button>
+          </form>
+
+          <div class="alert alert-success mt-3 d-none">
+            Your message has been sent successfully!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal fade" id="bookingModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Booking</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to book an appointment with GlowSkin?
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button class="btn btn-dark">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- ================= FOOTER ================= -->
 <footer class="af-footer af-bg-dark af-text-white pt-5 pb-4">

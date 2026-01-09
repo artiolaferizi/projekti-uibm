@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="artiola.css">
     <link rel="stylesheet" href="bootstrap.css">
 </head>
-<body>
-    <header class="af-header">
+<body id="af">
+  <header class="af-header">
   <div class="af-container nav-container">
     <div class="af-logo">
       <img src="images/logo.png" alt="logo" width="180px" height="150px" />
@@ -67,6 +67,56 @@
       <button class="af-btn af-btn-outline" id="af-read-more-btn">Read More</button>
     </div>
   </div>
+  <!-- ================= ABOUT US CAROUSEL ================= -->
+<section class="af-container my-5">
+  <div id="aboutCarousel" class="carousel slide rounded shadow-lg overflow-hidden" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/pexels-polina-kovaleva-6543550.jpg" class="d-block w-100" alt="GlowSkin Clinic">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Professional Care</h5>
+          <p>Certified specialists and advanced treatments.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/blog.jpg" class="d-block w-100" alt="Our Team">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Expert Team</h5>
+          <p>Experienced professionals dedicated to your skin.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/team2.jpg" class="d-block w-100" alt="Skin Results">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Visible Results</h5>
+          <p>Real care, real confidence.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
+</section>
+
 <!-- ================= WHY CHOOSE US ================= -->
 <section class="af-process">
   <div class="af-container">
@@ -83,15 +133,20 @@
 <!-- ================= OUR STORY ================= -->
 <section class="af-about container">
   <div class="af-about-grid">
-    <div class="af-about-image">
-      <img
-        src="images/stafi.jpg"
-        alt="Our Story"
-        class="af-glass-card rounded shadow-lg p-3"
-        width="400px"
-      />
+    <!-- TRE IMAZHE NË KOLONË -->
+    <div class="af-about-images">
+      <div class="about-img-wrapper">
+        <img src="images/beautiful-woman-taking-care-her-face.jpg" alt="Our Story 1" class="about-img">
+      </div>
+      <div class="about-img-wrapper">
+        <img src="images/beautician-woman-clinic.jpg" alt="Our Story 2" class="about-img">
+      </div>
+      <div class="about-img-wrapper">
+        <img src="images/beaty.jpg" alt="Our Story 3" class="about-img">
+      </div>
     </div>
 
+    <!-- TEKSTI -->
     <div class="af-about-text">
       <h2>Our Story</h2>
       <p>
@@ -108,36 +163,6 @@
   </div>
 </section>
 
-<!-- ================= MISSION & VISION ================= -->
-<section class="af-services container">
-  <h2>Our Mission & Vision</h2>
-
-  <div class="af-services-grid">
-    <div class="af-card">
-      <h3>Our Mission</h3>
-      <p>
-        To deliver personalized skincare solutions that enhance natural beauty,
-        restore skin health, and provide visible, long-lasting results.
-      </p>
-    </div>
-
-    <div class="af-card">
-      <h3>Our Vision</h3>
-      <p>
-        To become a leading beauty center recognized for innovation,
-        professionalism, and exceptional client care.
-      </p>
-    </div>
-
-    <div class="af-card">
-      <h3>Our Values</h3>
-      <p>
-        Quality, safety, professionalism, and trust guide everything we do
-        at GlowSkin.
-      </p>
-    </div>
-  </div>
-</section>
 
 <!-- ================= CTA ================= -->
 <section class="af-cta">
@@ -195,7 +220,7 @@
   </div>
 </footer>
 <script src="artiola.js"></script>
-
+<script src="bootstrap.bundle.js"></script>
 </body>
 </html>
 </body>
