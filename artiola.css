@@ -202,19 +202,7 @@ p {
   border-radius: 50% 45% 55% 50%;
   transition: transform 0.5s ease, filter 0.5s ease;
 }
-
-/* Efekti hover */
-.af-circle-img:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-}
-
-.af-circle-img:hover img {
-  transform: scale(1.1) rotate(-2deg);
-  filter: brightness(1.1);
-}
-
-/* Opsionale: efekt “glow” rreth imazhit */
+/* Efekt “glow” rreth imazhit */
 .af-circle-img::after {
   content: '';
   position: absolute;
@@ -232,6 +220,200 @@ p {
 .af-circle-img:hover::after {
   opacity: 1;
 }
+/* =========================================
+   RESPONSIVE – HERO
+========================================= */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .af-hero-left,
+  .af-hero-right {
+    margin-top: 80px;
+  }
+
+  .af-circle-img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .af-hero-left h1 {
+    font-size: 28px;
+  }
+
+  .af-hero-left p {
+    font-size: 15px;
+  }
+
+  .af-circle-img {
+    width: 240px;
+    height: 240px;
+  }
+}
+/* =========================================
+   RESPONSIVE – ABOUT SECTION
+========================================= */
+/* =========================================
+   RESPONSIVE – ABOUT SECTION
+========================================= */
+
+/* Desktop default (siguri që s’del jashtë) */
+.af-about {
+  overflow-x: hidden;
+}
+
+.af-about-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Tablet & small laptop */
+@media (max-width: 992px) {
+  .af-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .af-about-image img {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .af-about-text h2 {
+    font-size: 28px;
+  }
+
+  .af-about-text p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .af-about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .af-about-image img {
+    width: 100%;
+    max-width: 260px;
+    padding: 10px;
+  }
+
+  .af-about-text h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-top: -100px;
+  }
+
+  .af-about-text p {
+   display: none;
+  }
+
+  .af-about-text button {
+    margin-top: 20px;
+  }
+}
+
+
+
+/* =========================================
+   RESPONSIVE – NUMBERS
+========================================= */
+@media (max-width: 768px) {
+  .numbers-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE – SERVICES
+========================================= */
+@media (max-width: 992px) {
+  .af-services-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .af-services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   RESPONSIVE – TEAM
+========================================= */
+@media (max-width: 992px) {
+  .af-team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .af-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-team-member img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* =========================================
+   RESPONSIVE – PRICING
+========================================= */
+@media (max-width: 992px) {
+  .af-pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .af-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   RESPONSIVE – FAQ
+========================================= */
+@media (max-width: 576px) {
+  .af-faq {
+    margin: 40px 20px;
+  }
+
+  .af-faq h2 {
+    font-size: 24px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE – CTA
+========================================= */
+@media (max-width: 576px) {
+  .af-cta h2 {
+    font-size: 26px;
+  }
+}
+
+/* =========================================
+   GLOBAL FIX – NO HORIZONTAL SCROLL
+========================================= */
+html, body {
+  overflow-x: hidden;
+}
+
 
 /* =========================================
    ABOUT SECTION
@@ -257,18 +439,40 @@ p {
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
 }
+/* ================= OUR STORY ================= */
+.af-about-grid {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap; /* lejon që elementët të rreshtohen tek mobile */
+  margin-top: 40px;
+}
+
+.af-about-text {
+  flex: 1 1 400px; /* teksti merr hapësirë fleksibël */
+  text-align: left;
+}
+
+.af-about-text h2 {
+  margin-bottom: 20px;
+}
+
+.af-about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
 /* ================= OUR STORY IMAGES ================= */
 .af-about-images {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
 .about-img-wrapper {
-  flex: 1 1 30%; /* tre imazhe në një rresht dhe çdo imazh merr 30% të containerit */
-  max-width: 250px;/* imazhi nuk rritet shumë */
+  flex: 1 1 30%;
+  max-width: 250px;
 }
 
 .about-img {
@@ -283,16 +487,35 @@ p {
   transform: scale(1.05);
 }
 
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-  .af-about-images {
-    flex-direction: column;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .af-about-grid {
+    flex-direction: column; /* teksti poshtë imazheve */
     align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .af-about-text {
+    flex: 1 1 100%;
+  }
+
+  .af-about-images {
+    gap: 15px;
   }
 
   .about-img-wrapper {
-    max-width: 80%;
-    margin-bottom: 15px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-img-wrapper {
+    max-width: 90%;
+  }
+
+  .af-about-text p {
+    font-size: 0.95rem;
   }
 }
 
@@ -344,6 +567,58 @@ p {
   transform: translateY(-5px);
   border: 3px dashed #a85d5d;
 }
+/* =========================================
+   SERVICES – RESPONSIVE FIX
+========================================= */
+
+/* Siguri kundër overflow */
+.af-services {
+  overflow-x: hidden;
+}
+
+/* Center grid items */
+.af-services-grid {
+  justify-items: center;
+}
+
+/* Cards sizing */
+.af-services .af-card {
+  width: 100%;
+  max-width: 340px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .af-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .af-services h2 {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .af-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .af-services .af-card {
+    max-width: 100%;
+  }
+
+  .af-services h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .af-services p {
+    font-size: 14px;
+  }
+}
 
 /* =========================================
    PROCESS
@@ -351,22 +626,42 @@ p {
 .af-process {
   background-image: url(images/abstract-bg.jpg);
   background-size: cover;
-  padding: 80px 0;
+  background-position: center;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .af-process-grid {
   display: grid;
-  gap: 10px;
+  gap: 20px;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 40px;
 }
 
 .af-step {
   padding: 20px;
-  background: white;
+  background: rgba(255, 255, 255, 0.9); /* pak transparencë për bg */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ================= PROCESS RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .af-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .af-process-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================
@@ -467,84 +762,70 @@ p {
 /* =========================================
    FOOTER
 ========================================= */
-.af-footer {
-  font-family: Arial, sans-serif;
-  background-color: #000000;
-  color: #fff;
-}
-
-.af-footer a {
-  color: #fff;
-  transition: 0.3s;
-}
-
-.af-footer a:hover {
-  color: #0d6efd; /* Bootstrap primary blue */
-  text-decoration: none;
-}
-
-.af-footer h3, .af-footer h5 {
-  font-weight: 600;
-}
-
-.af-list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-
-.af-footer p {
-  margin-bottom: 0.5rem;
-}
-
-/* Përdorimi i klasave “af-” të ngjashme me Bootstrap */
-.af-bg-dark {
-  background-color: #000000;
-}
-
-.af-text-white {
-  color: #fff;
-}
-
-.af-text-decoration-none {
-  text-decoration: none;
-}
-
-.af-mb-3 {
-  margin-bottom: 1rem;
-}
-
-.af-my-4 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-
-
 /* =========================================
-   RESPONSIVE BREAKPOINTS
+   FOOTER (CLEAN – NO BOOTSTRAP UTILITIES)
 ========================================= */
-@media (max-width: 768px) {
-  .hero-grid,
-  .af-about-grid,
-  .af-services-grid,
-  .af-process-grid,
-  .af-team-grid,
-  .af-pricing-grid,
-  .numbers-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+
+.af-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 60px 0 40px;
 }
 
-@media (min-width: 1024px) {
-  .af-hero {
-    padding: 120px 0;
-  }
-  .af-services-grid .af-card {
-    height: 220px;
-  }
+.af-footer-col {
+  margin-bottom: 30px;
 }
+
+.af-footer-brand {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.af-footer-title {
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.af-footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 6px;
+}
+
+.af-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.af-footer-list li {
+  margin-bottom: 8px;
+}
+
+.af-footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.af-footer-link:hover {
+  color: #f7bfbc;
+}
+
+.af-footer-divider {
+  border: none;
+  border-top: 1px solid #f7bfbc;
+  margin: 30px 0;
+}
+
+.af-footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
 
 
 
@@ -1204,6 +1485,7 @@ Treatments
   background: #fafafa;
   margin-top: 50px;
 }
+
 .af-book-header h1 {
   font-size: 42px;
   margin-bottom: 15px;
@@ -1245,6 +1527,8 @@ Treatments
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .af-form-group textarea {
@@ -1285,12 +1569,60 @@ Treatments
   font-size: 14px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+  .af-book-wrapper {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 900px) {
   .af-book-wrapper {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .af-book-header h1,
+  .af-book-header p {
+    text-align: center;
+  }
+
+  .af-book-form,
+  .af-book-info {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .af-form-row {
+    grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 576px) {
+  .af-book-header h1 {
+    font-size: 32px;
+  }
+
+  .af-book-header p {
+    font-size: 14px;
+  }
+
+  .af-book-form,
+  .af-book-info {
+    padding: 25px;
+  }
+
+  .af-form-group input,
+  .af-form-group select,
+  .af-form-group textarea {
+    font-size: 14px;
+  }
+
+  .af-form-row {
+    gap: 15px;
+  }
+}
+
 /* ===== CONTACT US ===== */
 
 .af-contact {
