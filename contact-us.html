@@ -32,26 +32,10 @@
     </div>
   </div>
 </header>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | GlowSkin</title>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="bootstrap.css">
-
-  <!-- CSS im për ngjyra/styling -->
-  <link rel="stylesheet" href="artiola.css">
-</head>
-<body>
-
 <!-- ================= CONTACT HERO ================= -->
 <section class="bg-light py-5">
   <div class="container text-center">
-    <h1 class="fw-bold">Contact Us</h1>
+    <!-- <h1 class="fw-bold">Contact Us</h1> -->
     <p class="text-muted">
       We are here to help you with appointments, consultations, and questions.
     </p>
@@ -79,43 +63,36 @@
           </button>
         </div>
       </div>
-
       <!-- CONTACT FORM -->
-      <div class="col-lg-7">
-        <div class="p-4 bg-white shadow rounded">
-          <h4 class="mb-4">Send us a message</h4>
+<div class="col-lg-7">
+  <div class="p-4 bg-white shadow rounded">
+    <h4 class="mb-4">Send us a message</h4>
 
-          <form>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" placeholder="Full name" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <input type="email" class="form-control" placeholder="Email address" required>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-
-            <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Your message" required></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-dark w-100">
-              Send Message
-            </button>
-          </form>
-
-          <div class="alert alert-success mt-3 d-none">
-            Your message has been sent successfully!
-          </div>
+    <form id="contactForm">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" id="fullName" placeholder="Full name" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email address" required>
         </div>
       </div>
 
-    </div>
+      <div class="mb-3">
+        <input type="text" class="form-control" id="subject" placeholder="Subject">
+      </div>
+
+      <div class="mb-3">
+        <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-dark w-100">
+        Send Message
+      </button>
+    </form>
   </div>
+</div>
+
 </section>
 
 <!-- ================= MODAL ================= -->
