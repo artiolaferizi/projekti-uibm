@@ -131,6 +131,7 @@ p {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s ease;
+  pointer-events: auto;
 }
 
 .af-btn:hover {
@@ -147,7 +148,6 @@ p {
   background: #f7bfbc;
   color: white;
 }
-
 /* Small button */
 .btn-small {
   padding: 8px 20px;

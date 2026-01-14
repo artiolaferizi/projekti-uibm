@@ -9,58 +9,98 @@
   </head>
   <body id="af">
     <!-- ================= NAVBAR ================= -->
-   <header class="af-header">
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-      <!-- LOGO -->
-      <a class="navbar-brand" href="artiola.html">
-        <img src="images/logo.png" alt="logo" height="70">
-      </a>
+    <header class="af-header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- LOGO -->
+          <a class="navbar-brand" href="artiola.html">
+            <img src="images/logo.png" alt="logo" height="70" />
+          </a>
 
-      <!-- BURGER -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+          <!-- BURGER -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-      <!-- LINKS -->
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="artiola.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <!-- LINKS -->
+          <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+              <li class="nav-item">
+                <a class="nav-link" href="artiola.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about-us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
 
-          <!-- Dropdown Treatments -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="treatmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Treatments
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="treatmentsDropdown">
-              <li><a class="dropdown-item" href="facial.html">Facial</a></li>
-              <li><a class="dropdown-item" href="body-care.html">Body Care</a></li>
-              <li><a class="dropdown-item" href="laser-therapy.html">Laser Therapy</a></li>
+              <!-- Dropdown Treatments -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="treatmentsDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Treatments
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="treatmentsDropdown">
+                  <li>
+                    <a class="dropdown-item" href="facial.html">Facial</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="body-care.html">Body Care</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="laser-therapy.html"
+                      >Laser Therapy</a
+                    >
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="products.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+
+              <!-- Book Appointment button -->
+              <li class="nav-item ms-lg-3">
+                <a
+                  href="book.html"
+                  class="btn btn-outline-pink btn-sm rounded-pill px-4"
+                >
+                  Book Appointment
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="contact-us.html">Contact Us</a>
+              </li>
             </ul>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
-          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-
-          <!-- Book Appointment button -->
-          <li class="nav-item ms-lg-3">
-            <a href="book.html" class="btn btn-outline-pink btn-sm rounded-pill px-4">
-              Book Appointment
-            </a>
-          </li>
-
-          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-
-
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- ================= HERO ================= -->
     <section class="af-hero">
@@ -226,24 +266,21 @@
     <!-- ================= PRICING ================= -->
     <section class="af-pricing container">
       <h2>Our pricing plans</h2>
-
       <div class="af-pricing-grid">
         <div class="af-price-card">
           <h3>Basic</h3>
           <p class="af-price">€20 / session</p>
-          <button class="af-btn">Choose</button>
+          <button class="af-btn" data-plan="Basic">Choose</button>
         </div>
-
         <div class="af-price-card highlight">
           <h3>Premium</h3>
           <p class="af-price">€45 / session</p>
-          <button class="af-btn">Choose</button>
+          <button class="af-btn" data-plan="Premium">Choose</button>
         </div>
-
         <div class="af-price-card">
           <h3>Luxury</h3>
           <p class="af-price">€80 / session</p>
-          <button class="af-btn">Choose</button>
+          <button class="af-btn" data-plan="Luxury">Choose</button>
         </div>
       </div>
     </section>
@@ -342,7 +379,8 @@
         </div>
       </div>
     </footer>
-    <script src="artiola.js"></script>
     <script src="bootstrap.bundle.js"></script>
+
+    <script src="artiola.js"></script>
   </body>
 </html>

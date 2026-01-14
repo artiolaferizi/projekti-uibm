@@ -11,7 +11,8 @@
     const message = document.getElementById('message').value.trim();
 
     // Validim bazik
-    if(fullName === "" || email === "" || message === "") {
+   
+    if (fullName === "" || email === "" || message === "") {
       alert("Ju lutem plotësoni të gjitha fushat e kërkuara!");
       return;
     }
@@ -29,3 +30,15 @@
     // Pastrimi i formës
     form.reset();
   });
+
+
+  //Konfirmimi i terminit
+   function bookAlert() {
+    alert("You have successfully booked your appointment 💖");
+  }
+
+
+  //Pricing plan
+   function showPlanAlert(planName) {
+    alert(`You selected the "${planName}" plan!`);
+  }
